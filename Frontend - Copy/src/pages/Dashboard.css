@@ -1,0 +1,111 @@
+.dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url("https://media.istockphoto.com/id/875207140/photo/sport-background-with-fitness-equipment-in-gym-gym.jpg?s=612x612&w=0&k=20&c=VEpZIAJ3wdlwHwvWuLumDmpsWczobiSH5kL981H5Cvk=") no-repeat center center/cover;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+    z-index: -10;
+}
+
+.dashboard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  z-index: 0;
+}
+
+.dashboard-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.dashboard-header h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dashboard-header button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-header button:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 6px 20px rgba(255, 105, 180, 0.5);
+}
+
+.dashboard-nav {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dashboard-nav button {
+  flex: 1 1 auto;
+  padding: 12px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(6px);
+}
+
+.dashboard-nav button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.dashboard-nav button.active {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  font-weight: 700;
+  box-shadow: 0 0 18px rgba(0, 198, 255, 0.6);
+}
+
+.dashboard-content {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  margin: 30px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
